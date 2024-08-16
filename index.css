@@ -9,8 +9,15 @@
 {
     margin: 0;
 }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 body{
     font-family: "Montserrat", system-ui, monospace, Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
 }
 .container
 {
@@ -75,6 +82,7 @@ img{
     font-weight: 800;
     line-height: 3em;
     color: #fff;
+    font-size: 0.8rem;
 }
 ul{
     list-style: none;
@@ -84,5 +92,69 @@ ul{
 ul li:hover {
     color: #e2dddd;
 }
+.user-navigation .home::before
+{
+    content: url(images/home.svg);
+}
+.user-navigation .prof::before
+{
+    content: url(images/account.svg);
+}
+.user-navigation .msg::before
+{
+    content: url(images/message.svg);
+}
+.user-navigation .his::before
+{
+    content: url(images/history.svg);
+}
+.user-navigation .tasks::before
+{
+    content: url(images/calendar-check.svg);
+}
+.user-navigation .comm::before
+{
+    content: url(images/hammer-sickle.svg);
+}
 
+.settings-menu .settings::before
+{
+    content: url(images/cog.svg);
+}
+.settings-menu .support::before
+{
+    content: url(images/face-agent.svg);
+}
+.settings-menu .privacy::before
+{
+    content: url(images/incognito.svg);
+}
+.user-navigation .home::before,
+.user-navigation .prof::before,
+.user-navigation .msg::before,
+.user-navigation .his::before,
+.user-navigation .tasks::before,
+.user-navigation .comm::before,
+.settings-menu .settings::before,
+.settings-menu .support::before,
+.settings-menu .privacy::before
+{
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    left: -50px;
+    bottom: 9px;
+    filter: invert(100%) sepia(2%) saturate(0%) hue-rotate(352deg) brightness(102%) contrast(103%);
+}
+.dashboard,
+.user-navigation,
+.settings-menu {
+  margin-left: 3rem;
+}
+
+.dashboard,
+.user-navigation ul li,
+.settings-menu ul li {
+  position: relative;
+}
 
