@@ -53,3 +53,36 @@ body{
     grid-column: 2 / 3;
     margin-left: 1em;
 }
+img{
+    display: block;
+    width: 100%;
+}
+.icon{
+    width: 20px;
+    cursor: pointer;
+}
+.project-icons{
+    display: flex;
+    gap: 1.5em;
+    justify-content: end;
+}
+.sidebar{
+    background-color: #dc143c;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    gap: 3em;
+    font-weight: 800;
+    line-height: 3em;
+    color: #fff;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ul li:hover {
+    color: #e2dddd;
+}
+
+
