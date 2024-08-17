@@ -19,11 +19,60 @@ body{
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
 }
+input,button {
+  font: inherit;
+}
 .container
 {
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr 2fr 2fr;
+}
+.header
+{
+    grid-row: 1 / 2;
+    display: grid;
+    padding: 1em 3em;
+    gap: 1em;
+    align-items: center;
+}
+label {
+    display: flex;
+}
+  
+input {
+    border-radius: 10em;
+    outline: none;
+    background: #e2dddd;
+    border: none;
+    padding: 0.2em 0.5em;
+    width: 80%;
+    min-width: 50px;
+  }
+.profile-avatar-top img {
+    width: 50px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.header .top
+{
+    display: grid;
+    grid-template-columns: minmax(30px, 3fr) minmax(20px, 1fr);
+    align-items: center;
+}
+
+.search
+{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.top-end {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.5em;
+    justify-content: end;
+    align-items: center;
 }
 .sidebar
 {
@@ -82,7 +131,7 @@ img{
     font-weight: 800;
     line-height: 3em;
     color: #fff;
-    font-size: 0.8rem;
+    font-size: 1.1em;
 }
 ul{
     list-style: none;
@@ -91,6 +140,22 @@ ul{
 }
 ul li:hover {
     color: #e2dddd;
+    cursor: pointer;
+}
+.dashboard 
+{
+    font-size: 2rem;
+    cursor: pointer;
+}
+.dashboard::before
+{
+    content: url(images/view-dashboard.svg);
+    position: absolute;
+    height: 1.4em;
+    width: 1.4em;
+    left: -60px;
+    top: -2px;
+    filter: invert(100%) sepia(2%) saturate(0%) hue-rotate(352deg) brightness(102%) contrast(103%);
 }
 .user-navigation .home::before
 {
@@ -140,10 +205,10 @@ ul li:hover {
 .settings-menu .privacy::before
 {
     position: absolute;
-    height: 2rem;
-    width: 2rem;
+    height: 1.4em;
+    width: 1.4em;
     left: -50px;
-    bottom: 9px;
+    bottom: 22.6px;
     filter: invert(100%) sepia(2%) saturate(0%) hue-rotate(352deg) brightness(102%) contrast(103%);
 }
 .dashboard,
